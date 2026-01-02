@@ -17,15 +17,6 @@ Fidelity.Toml is a pure F# implementation of a [TOML 1.0.0](https://toml.io/en/v
 
 This library is a component of the [Fidelity Framework](https://github.com/FidelityFramework) - an ecosystem for compiling F# to native code without the .NET runtime.
 
-The Fidelity Framework includes:
-
-| Project | Description |
-|---------|-------------|
-| [**fsnative**](https://github.com/FidelityFramework/fsnative) | F# Native Compiler Services - type checking for native F# |
-| [**Firefly**](https://github.com/FidelityFramework/Firefly) | AOT compiler: F# → MLIR → LLVM → native binaries |
-| [**Alloy**](https://github.com/FidelityFramework/Alloy) | Native F# standard library (BCL-free) |
-| **Fidelity.Toml** | TOML parser for project configuration |
-
 ### Why a Separate TOML Library?
 
 Fidelity.Toml exists as a standalone library because:
@@ -35,6 +26,8 @@ Fidelity.Toml exists as a standalone library because:
 2. **Shared infrastructure**: Both the Firefly compiler and FsNativeAutoComplete (the LSP server) need to parse `.fidproj` project files. A shared library eliminates duplication.
 
 3. **General utility**: A compliant TOML parser is useful beyond project files - configuration, data exchange, and more.
+
+4. **Joy**: [XParsec](https://github.com/roboz0r/XParsec) is a great library and I really dig working with it.
 
 ## Installation
 
