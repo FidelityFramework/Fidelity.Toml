@@ -15,6 +15,7 @@
     <Compile Include="TableTests.fs" />
     <Compile Include="DocumentTests.fs" />
     <Compile Include="EdgeCaseTests.fs" />
+    <Compile Include="SerializerTests.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
 

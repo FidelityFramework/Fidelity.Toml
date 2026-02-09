@@ -52,3 +52,11 @@ module Toml =
     /// Gets all keys at the root level of the document.
     let keys (doc: TomlDocument): string seq =
         TomlTable.keys doc
+
+    /// Serializes a TOML document to a valid TOML string.
+    let serialize (doc: TomlDocument): string =
+        TomlSerializer.serializeDocument doc
+
+    /// Serializes a single TOML value to its string representation.
+    let serializeValue (value: TomlValue): string =
+        TomlSerializer.serializeValue value
