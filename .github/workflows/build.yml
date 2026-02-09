@@ -19,8 +19,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - run: dotnet restore
-      - run: dotnet build src/Fidelity.Toml.fsproj --no-restore -c Release
-      - run: dotnet build test/Fidelity.Toml.Tests.fsproj --no-restore -c Release
+      - run: dotnet build --no-restore -c Release
 
       - name: Run tests
         run: dotnet run --project test/Fidelity.Toml.Tests.fsproj -c Release --no-build
