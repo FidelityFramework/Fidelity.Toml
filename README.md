@@ -1,5 +1,7 @@
 # Fidelity.Toml
 
+> **DEPRECATED**: This library has been deprecated and will be replaced by [Fidelity.Data](https://github.com/FidelityFramework/Fidelity.Data).
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TOML](https://img.shields.io/badge/TOML-1.0.0-orange.svg)](https://toml.io/en/v1.0.0)
 
@@ -15,7 +17,7 @@ Fidelity.Toml is a pure F# implementation of a [TOML 1.0.0](https://toml.io/en/v
 
 ## Part of the Fidelity Framework
 
-This library is a component of the [Fidelity Framework](https://github.com/FidelityFramework) - an ecosystem for compiling F# to native code without the .NET runtime.
+This library is a component of the [Fidelity Framework](https://github.com/FidelityFramework) - an ecosystem for compiling Clef code to native targets while bootstrapped in F#.
 
 ### Why a Separate TOML Library?
 
@@ -23,7 +25,7 @@ Fidelity.Toml exists as a standalone library because:
 
 1. **Self-hosting path**: As the Fidelity toolchain matures toward self-hosting, every dependency must be expressible in native F#. Having a pure F# TOML parser (using XParsec) ensures the entire toolchain can eventually compile itself.
 
-2. **Shared infrastructure**: Both the Firefly compiler and FsNativeAutoComplete (the LSP server) need to parse `.fidproj` project files. A shared library eliminates duplication.
+2. **Shared infrastructure**: Both the Composer compiler and ClefAutoComplete (the LSP server) need to parse `.fidproj` project files. A shared library eliminates duplication.
 
 3. **General utility**: A compliant TOML parser is useful beyond project files - configuration, data exchange, and more.
 
@@ -131,13 +133,6 @@ val getStringArray : string -> TomlDocument -> string list option
 val getTable : string -> TomlDocument -> TomlDocument option
 ```
 
-## Building from Source
-
-```bash
-git clone https://github.com/FidelityFramework/Fidelity.Toml.git
-cd Fidelity.Toml
-dotnet build
-dotnet test
 ```
 
 ## Contributing
@@ -150,4 +145,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-*Part of the [Fidelity Framework](https://github.com/FidelityFramework) - Native F# for everyone.*
+*Part of the [Fidelity Framework](https://github.com/FidelityFramework) - Native Systems for everyone.*
